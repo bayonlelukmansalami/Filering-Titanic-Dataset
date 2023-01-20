@@ -90,7 +90,5 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].astype(str).str.contains(user_text_input)]
 
     return df
-data_url = "https://github.com/bayonlelukmansalami/Filering-Titanic-Dataset/blob/main/titanic.csv"
-
-df = pd.read_csv(data_url)
+df = pd.read_csv('titanic.csv')
 st.dataframe(filter_dataframe(df))
