@@ -90,5 +90,5 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].astype(str).str.contains(user_text_input)]
 
     return df
-df = pd.read_csv('titanic.csv')
+df = pd.read_csv('titanic.csv',index_col=0)
 st.dataframe(filter_dataframe(df))
